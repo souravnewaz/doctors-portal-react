@@ -83,8 +83,8 @@ function Questions() {
                     </div>
                     {ques.map(q => (
                       <div class="p-5 bg-gray-100 rounded shadow">
-                        <p key = {q.id}> {q.created_by}  </p>
-                        <p class="text-2xl font-bold"> {q.question}  </p>
+                        <p key = {q.id} class="text-blue-400"> {q.created_by}  </p>
+                        <p class="text-xl font-bold"> {q.question}  </p>
                       </div>              
                     ))}
                   </div>

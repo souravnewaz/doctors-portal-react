@@ -4,6 +4,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
+import Nav from "../Nav";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -27,13 +28,14 @@ function Users() {
 
     var getUser = sessionStorage.getItem('user');
     var user_data = JSON.parse(getUser);
-    console.log(user_data.user_type);
+    //console.log(user_data.user_type);
     if(user_data.user_type !== 'admin'){
       return <Redirect to = "/login"/>
     } else{
       return (
-
-        <div>      
+        <Nav> 
+        <div> 
+             
             <h1>Users Here</h1> 
             
             {users.map(user => (
@@ -42,8 +44,11 @@ function Users() {
                   <p class=""> {user.email}  </p>
                 </div>
                   
-              ))}    
+              ))}
+                  
         </div>
+
+        </Nav>
       );
     }
     //console.log('User Found: ', user_data)

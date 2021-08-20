@@ -61,6 +61,7 @@ function Login() {
               user.email = data.email;
               user.user_type = data.user_type;
               sessionStorage.setItem('user', JSON.stringify(user));
+              console.log(user)
 
               
               history.push('/')

@@ -11,6 +11,7 @@ import Signup from './pages/Signup';
 import Logout from './Logout';
 import Profile from './pages/Profile';
 import Doctor from './pages/Doctor';
+import Appointments from './pages/Appointments';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           
         <Switch>
           <Route path="/" exact component={ Home } />
+          <Route path="/appointments" exact component={ Appointments } />
           <Route path="/blogs" exact component={ Blogs } />
           <Route path="/questions" exact component={ Questions } />
           <Route path="/doctors" exact component={ Doctors } />

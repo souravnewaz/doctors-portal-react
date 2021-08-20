@@ -31,10 +31,10 @@ function Doctors() {
           <div class="text-center mt-5 mb-5 ">
               <h1 class="text-3xl font-bold">Doctors Here</h1>
               {doctors.map(doctor => (
-                      <div class="p-5 bg-gray-100 rounded shadow">
+                      <div class="p-5 bg-gray-100 rounded shadow mt-5 mx-5">
                         <a href={"/doctor/"+doctor.id}>
                           <p key = {doctor.id}> {doctor.full_name}  </p>
-                          <p class=" font-bold"> {doctor.email}  </p>                          
+                          <p class=" font-bold"> {doctor.title}  </p>                          
                         </a>
                       </div>              
                     ))}
